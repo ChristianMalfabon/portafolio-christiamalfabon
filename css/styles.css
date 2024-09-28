@@ -9,3 +9,14 @@
     width: 50%;
     align-items: center;
 }
+
+.description__parrafo{
+    padding-left: 7%;
+}
+
+.social__media{
+    display: flex;
+    width: 50%;
+    padding-left: 3.5%;
+    gap: 20px;
+}
