@@ -44,12 +44,162 @@
 
 .main__section{
     background-color: rgb(43, 167, 53);
-    display: flex;
+   display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 0 15% 0 15%;
 }
 
-#skills{
-     
+#sobreMi__section{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+   
 }
+
+#sobreMi__tittle{
+    text-align: center;
+}
+
+#sobreMi__parrafo{
+    width: 80%;
+}
+
+#skills__container{
+    display: flex;
+    
+         
+}
+
+.skills__description{ 
+    width: 50%;
+}
+
+.skills__terminal{
+    width: 45%;
+}
+
+.terminal__toolbar{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    background: linear-gradient(#504b45, #3c3b37);
+}
+
+.terminal__toolbar .butt{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+
+}
+
+.btn{
+    width: 15px ;
+    height: 15px;
+    border-radius: 50%;
+   
+}
+
+.btn__red {
+    background-color:  rgb(168, 40, 40);
+    
+}
+
+.btn__yellow{
+    background-color: yellow;
+
+}
+
+.btn__green{
+    background-color: green;
+
+}
+
+.cajaSkills__texto{
+    background-color: black;
+    color: white;
+    margin: 0;
+}
+
+.skills__parrafo{
+    margin: 0;
+    border;
+}
+
+/*slider skills*/
+
+.slider{ 
+    width: 70vw;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+}
+
+
+.slider .slide-track{
+    display: flex;
+    animation: scroll 10s linear infinite;
+    -webkit-animation: scroll 10s linear infinite;
+    width: calc(200px * 12); /*se multiplica por el doble de las imagenes*/
+}
+
+.slider .slide {
+    width: 200px;
+}
+
+.slider .slide img{ 
+    width: 100%;
+    
+}
+
+@keyframes scroll{
+    0%{
+        -webkit-transform: translateX(0) ;
+        transform: translateX(0);
+    }
+    100%{
+        -webkit-transform: translateX (calc(-200px*6)) ; /*cantidad exacta de imagenes*/
+        transform: translateX(calc(-200px*6));
+    }
+}
+
+
+
+/*slider tools*/
+
+.slider__tools{ 
+    width: 70vw;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider__tools .slide-track__tools{
+    display: flex;
+    animation: scroll 10s linear infinite;
+    -webkit-animation: scroll 10s linear infinite;
+    width: calc(200px * 12);
+}
+
+.slider__tools .slide {
+    width: 200px;
+}
+
+.slider__tools .slide img{ 
+    width: 100%;
+    
+}
+
+@keyframes scroll{
+    0%{
+        -webkit-transform: translateX(0) ;
+        transform: translateX(0);
+    }
+    100%{
+        -webkit-transform: translateX (calc(-200px*6)) ;
+        transform: translateX(calc(-200px*6));
+    }
+}
+
