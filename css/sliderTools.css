@@ -1,0 +1,70 @@
+/* General slider styles */
+.slider{ 
+    width: 70vw;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider .slide-track{
+    display: flex;
+    animation: scroll-left 10s linear infinite; /* Animación hacia la izquierda */
+    -webkit-animation: scroll-left 10s linear infinite;
+    width: calc(200px * 12); /* Se multiplica por el doble de las imágenes */
+}
+
+.slider .slide {
+    width: 200px;
+}
+
+.slider .slide img{ 
+    width: 100%;
+}
+
+/* Animación hacia la izquierda */
+@keyframes scroll-left {
+    0%{
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100%{
+        -webkit-transform: translateX(calc(-200px*6)); /* Se mueve hacia la izquierda */
+        transform: translateX(calc(-200px*6));
+    }
+}
+
+
+/* Styles para el segundo slider (slider__tools) */
+.slider__tools{ 
+    width: 70vw;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider__tools .slide-track__tools{
+    display: flex;
+    animation: scroll-right 10s linear infinite; /* Animación hacia la derecha */
+    -webkit-animation: scroll-right 10s linear infinite;
+    width: calc(200px * 12);
+}
+
+.slider__tools .slide {
+    width: 200px;
+}
+
+.slider__tools .slide img{ 
+    width: 100%;
+}
+
+/* Animación hacia la derecha */
+@keyframes scroll-right {
+    0%{
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100%{
+        -webkit-transform: translateX(calc(200px*6)); /* Se mueve hacia la derecha */
+        transform: translateX(calc(200px*6));
+    }
+}
