@@ -17,13 +17,13 @@
             <a  href=""> <img src="./assets/visual studio code png.png"  class="header__logo" alt=""></a>
             <nav  >
                 <ul class="header__menu--nav" >
-                    
-                <a href=""><li>Skills</li></a> 
-                <a href=""><li>Hobbies</li></a> 
-                <a href=""><li>Sobre mí</li></a> 
-                <a href=""><li>Proyectos</li></a> 
+
+                <a href="#section__sobreMi"><li>Sobre mí</li></a>     
+                <a href="#skills__container"><li>Skills</li></a> 
+                <a href="#section__herramientas"><li>Herramientas</li></a> 
+                <a href="#section__proyectos"><li>Proyectos</li></a> 
                 <a href=""><li>Formación</li></a> 
-                <a href=""><li>christian.malfabon@hotmail.com</li></a> 
+                <a href="#section_contacto"><li>christian.malfabon@hotmail.com</li></a> 
                 </ul>
             </nav>
         </div>    
@@ -47,7 +47,7 @@
 
     <main class="main__section" >
 
-        <section class="section" id="sobreMi__section" > 
+        <section class="section" id="section__sobreMi" > 
             <h2 class="section__tittle" id="sobreMi__tittle" >Sobre mí</h2>
             <p   class="section__parrafo" id="sobreMi__parrafo" >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque eligendi quia quibusdam ducimus perspiciatis! Minus distinctio vel veritatis, nostrum, fugit unde, sunt et molestiae optio sed blanditiis dolorem eaque consequatur?</p> 
         </section>
@@ -127,7 +127,7 @@
             </div>
         </div>  -->
         
-        <section class="section" > 
+        <section class="section" id="section__herramientas" > 
             <h2 class="section__tittle" >Herramientas</h2>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque eligendi quia quibusdam ducimus perspiciatis! Minus distinctio vel veritatis, nostrum, fugit unde, sunt et molestiae optio sed blanditiis dolorem eaque consequatur?</p> 
 
@@ -180,8 +180,29 @@
         
         
         
-        <section class="section" > 
+        <section class="section" id="section__proyectos" > 
             <h2>Proyectos</h2>
+
+            <div class="proyectos__cards" >
+                <article>
+                    <a href="https://simulador-prestamos.vercel.app/" target="_blank" ><img src="./assets/simulador-prestamos.PNG" class="article__image" alt="" ></a>
+                    <h3>Calculadora de préstamos</h3>
+                    <p class="card__text" >Aplicación que calcula la mensualidad que debe pagar un cliente que pide un préstamo a 12, 24 o 36 meses. El límite de crédito es de 3 millones de pesos </p>
+                </article>
+
+                <article>
+                    <a href="https://christianmalfabon.github.io/encriptador/" target="_blank" ><img src="./assets/encriptador.PNG" class="article__image" alt=""></a>
+                    <h3>Encriptador de textos</h3>
+                    <p class="card__text" >Aplicación que permite encriptar textos, no permite carácteres especiales, ni números. También puede desencriptar los mensajes</p>
+                </article>
+
+                <article>
+                    <a href="https://christianmalfabon.github.io/dulceinfinito-desayunos/" target="_blank"><img src="./assets/dulce infinito.PNG" class="article__image dulce_infinito " alt=""></a>
+                    <h3>Dulce Infinito</h3>
+                    <p class="card__text" >Sitio web de la empresa Dulce Inifito, dedicada a la venta de desayunos sorpresa y el envío de detalles</p>
+                </article>
+            </div>
+
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse ipsum dicta maiores consequatur obcaecati recusandae, expedita nulla quas voluptatum consequuntur ea ipsam nostrum pariatur tempora id sed tempore eveniet architecto.</p> 
         </section>
         
@@ -190,21 +211,21 @@
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse ipsum dicta maiores consequatur obcaecati recusandae, expedita nulla quas voluptatum consequuntur ea ipsam nostrum pariatur tempora id sed tempore eveniet architecto.</p> 
         </section>
         
-        <section class="section" > 
-            <h2>Contacto</h2>
-            <form action="">
+        <section class="section section__form" id="section_contacto" > 
+            <h2 class="contacto__tittle" >Contacto</h2>
+            <form class="form" action="">
                 <input type="text" placeholder="Nombre" >
                 <input type="email" placeholder="@correo" >
                 <input type="text" placeholder="Asunto" > 
                 <textarea name="mensaje" id="" rows="4" placeholder="Mensaje" ></textarea>
-                <input type="submit" value="Enviar">
+                <input id="send" type="submit" value="Enviar">
             </form>
         </section>
         
     </main>
     
     <footer>
-        <p>Desarrollado por Christian Malfabón &copy;</p>
+        <p class="footer__text" >Creado por Christian Malfabón &copy;</p>
     </footer>
 
 </body>

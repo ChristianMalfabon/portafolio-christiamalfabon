@@ -1,9 +1,26 @@
 /*HEADER*/
+body {
+    background-image: url("../assets/azulaurora.jpg");
+    background-size: cover;
+    
+    color: white;
+} 
 
 .header__menu{
     display: flex;
     justify-content: space-around;
     margin-top: 20px;
+    align-items: center;
+    
+
+    background: linear-gradient(135deg, rgba(14, 27, 171, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0 0 0 0.37);
+
+    
 
 }
 
@@ -17,6 +34,30 @@
     gap: 20px;
 
 }
+
+
+
+li{
+    font-size: 1.3rem;
+}
+
+a :hover{
+    color: #0ff;
+    filter: drop-shadow(0 0 12px aqua);
+    font-size: 1.7rem;
+}
+/*
+ul  {
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0 0 0 0.37);
+} */
+
+
 /*DESCRIPCIÓN*/
 .description{ 
     display: flex;
@@ -43,14 +84,26 @@
 }
 
 .main__section{
-    background-color: rgb(43, 167, 53);
-   display: flex;
+   /* background-color: rgb(43, 167, 53); */
+    display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 0 15% 0 15%;
+    gap: 20px;
 }
 
-#sobreMi__section{ 
+/*efecto de cristal*/
+
+section  {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0 0 0 0.37);
+}
+
+#section__sobreMi{ 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -137,12 +190,11 @@
     overflow: hidden;
 }
 
-
 .slider .slide-track{
     display: flex;
-    animation: scroll 10s linear infinite;
-    -webkit-animation: scroll 10s linear infinite;
-    width: calc(200px * 12); /*se multiplica por el doble de las imagenes*/
+    animation: scroll-left 10s linear infinite; /* Animación hacia la izquierda */
+    -webkit-animation: scroll-left 10s linear infinite;
+    width: calc(200px * 12); /* Se multiplica por el doble de las imágenes */
 }
 
 .slider .slide {
@@ -151,24 +203,22 @@
 
 .slider .slide img{ 
     width: 100%;
-    
 }
 
-@keyframes scroll{
+/* Animación hacia la izquierda */
+@keyframes scroll-left {
     0%{
-        -webkit-transform: translateX(0) ;
+        -webkit-transform: translateX(0);
         transform: translateX(0);
     }
     100%{
-        -webkit-transform: translateX (calc(-200px*6)) ; /*cantidad exacta de imagenes*/
+        -webkit-transform: translateX(calc(-200px*6)); /* Se mueve hacia la izquierda */
         transform: translateX(calc(-200px*6));
     }
 }
 
 
-
-/*slider tools*/
-
+/* Styles para el segundo slider (slider__tools) */
 .slider__tools{ 
     width: 70vw;
     height: auto;
@@ -178,8 +228,8 @@
 
 .slider__tools .slide-track__tools{
     display: flex;
-    animation: scroll 10s linear infinite;
-    -webkit-animation: scroll 10s linear infinite;
+    animation: scroll-right 10s linear infinite; /* Animación hacia la derecha */
+    -webkit-animation: scroll-right 10s linear infinite;
     width: calc(200px * 12);
 }
 
@@ -189,17 +239,114 @@
 
 .slider__tools .slide img{ 
     width: 100%;
-    
 }
 
-@keyframes scroll{
+/* Animación hacia la derecha */
+@keyframes scroll-right {
     0%{
-        -webkit-transform: translateX(0) ;
+        -webkit-transform: translateX(0);
         transform: translateX(0);
     }
     100%{
-        -webkit-transform: translateX (calc(-200px*6)) ;
-        transform: translateX(calc(-200px*6));
+        -webkit-transform: translateX(calc(200px*6)); /* Se mueve hacia la derecha */
+        transform: translateX(calc(200px*6));
     }
 }
 
+.proyectos__cards{
+    display: flex;
+    text-align: center;
+    gap: 5px;
+
+}
+
+article{
+    border: solid 2px white;
+    border-radius: 10px;
+
+}
+
+article :hover{
+    color: #0ff;
+    filter: drop-shadow(0 0 12px aqua);
+    
+
+}
+
+.article__image{
+    width: 95%;
+    border: solid 5px white;
+    margin-top: 3%;
+}
+
+.card__text{
+    font-size: 1.3rem;
+    color: bisque;
+}
+
+.dulce_infinito{
+    border-bottom: solid 14px white ;
+}
+
+
+.section__form{
+    
+    
+    
+}
+
+.form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:20px;
+    
+
+}
+
+h2{
+    text-align: center;
+    color: #0ff;
+    filter: drop-shadow(0 0 12px aqua);
+    font-size: 2.5rem;
+}
+
+.contacto__tittle{
+    text-align: center;
+    color: #0ff;
+    filter: drop-shadow(0 0 12px aqua);
+    font-size: 2.5rem;
+}
+
+input, textarea {
+    width:80%;
+    font-size:1.5rem;
+    border: solid 2px white;
+    
+}
+
+#send{
+    max-width: 30%;
+    height: 5vh;
+    border: groove;
+    background-color: azure;
+}
+
+#send:hover{
+    background-color: rgb(28, 65, 143);
+    color: azure;
+}
+
+.footer__text{
+    text-align: center;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0 0 0 0.37);
+
+    border: solid 1px  rgba(0, 255, 255, 0.21);
+    
+    filter: drop-shadow(0 0 12px aqua)
+}
