@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Christian Malfabón Portafolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
    <link rel="stylesheet" href="./css/reset.css"> 
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/sliderTools.css">
@@ -15,15 +16,17 @@
 
         <div class="header__menu">
             <a  href=""> <img src="./assets/visual studio code png.png"  class="header__logo" alt=""></a>
-            <nav  >
+            <button class="abrirMenu" id="abrir"><i class="bi bi-list"></i></button>
+            <nav  class="nav" id="nav">
+                <button class="cerrarMenu" id="cerrar" ><i class="bi bi-x-circle-fill"></i></button>
                 <ul class="header__menu--nav" >
 
-                <a href="#section__sobreMi"><li>Sobre mí</li></a>     
-                <a href="#skills__container"><li>Skills</li></a> 
-                <a href="#section__herramientas"><li>Herramientas</li></a> 
-                <a href="#section__proyectos"><li>Proyectos</li></a> 
-                <a href=""><li>Formación</li></a> 
-                <a href="#section_contacto"><li>@Contacto</li></a> 
+                    <!-- <a href="#section__sobreMi"><li>Sobre mí</li></a>      -->
+                    <a href="#skills__container"><li>Skills</li></a> 
+                    <a href="#section__herramientas"><li>Herramientas</li></a> 
+                    <a href="#section__proyectos"><li>Proyectos</li></a> 
+                    <!-- <a href=""><li>Formación</li></a>  -->
+                    <a href="#section_contacto"><li>@Contacto</li></a> 
                 </ul>
             </nav>
         </div>    
@@ -38,6 +41,9 @@
 
             <div class="description__foto" >
                 <img src="./assets/avatar gris.PNG" class="description__avatar" alt="">
+                <div class="descargar__cv" >
+                    <a href="./assets/INE CHRISTIAN MALFABON.pdf" target="_blank" download="Christian"><button class="descargar" ><i class="bi bi-cloud-arrow-down-fill"></i></button></a>
+                </div>
             </div>
             
             
@@ -67,7 +73,7 @@
 
             <div class="skills__description" >
                 <h2 class="section__tittle" >Skills</h2>
-                <p class="section__parrafo" >Poseo sólidas habilidades de liderazgo y gestión de proyectos, lo que me permite guiar equipos de manera eficiente y estratégica. Disfruto trabajar en equipo, ya que creo que la colaboración es clave para alcanzar objetivos comunes. Me enfoco en apoyar a cada área, brindando el respaldo necesario para maximizar su potencial, con el fin de asegurar que se obtengan los mejores resultados posibles en cada proyecto.</p> 
+                <p class="section__parrafo">Tengo habilidades de liderazgo y gestión de proyectos que me permiten guiar equipos de manera estratégica. Disfruto del trabajo en equipo, apoyando a cada área para maximizar su potencial y obtener los mejores resultados en cada proyecto.</p> 
             </div>
 
             <div class="skills__terminal" >
@@ -92,94 +98,94 @@
             </div>     
         </section>
                 <!-- slider de skills -->
-        <!-- <div class="slider">
+        <div class="slider">
             <div class="slide-track">
                 <div class="slide">
-                    <img src="./assets/bootstrap.png" alt="">
+                    <img class="slider__img" src="./assets/bootstrap.png" alt="">
                 </div>
                 <div class="slide">
-                    <img src="./assets/css.png" alt="">
+                    <img class="slider__img" src="./assets/css.png" alt="">
+                </div> 
+                <div class="slide">
+                    <img class="slider__img" src="./assets/html png.png" alt="">
                 </div>
                 <div class="slide">
-                    <img src="./assets/html png.png" alt="">
+                    <img class="slider__img" src="./assets/js png.png" alt="">
+                </div>   
+                <div class="slide">
+                    <img class="slider__img" src="./assets/linked in.png" alt="">
                 </div>
                 <div class="slide">
-                    <img src="./assets/js png.png" alt="">
-                </div>  
-                <div class="slide">
-                    <img src="./assets/linked in.png" alt="">
-                </div>
-                <div class="slide">
-                    <img src="./assets/sass texto.png" alt="">
-                </div>  
+                    <img class="slider__img" src="./assets/sass texto.png" alt="">
+                </div>   
 
 
                 <div class="slide">
-                    <img src="./assets/bootstrap.png" alt="">
+                    <img class="slider__img" src="./assets/bootstrap.png" alt="">
                 </div>
                 <div class="slide">
-                    <img src="./assets/css.png" alt="">
+                    <img class="slider__img" src="./assets/css.png" alt="">
+                </div> 
+                 <div class="slide">
+                    <img class="slider__img" src="./assets/html png.png" alt="">
                 </div>
                 <div class="slide">
-                    <img src="./assets/html png.png" alt="">
+                    <img class="slider__img" src="./assets/js png.png" alt="">
+                </div>   
+                <div class="slide">
+                    <img class="slider__img" src="./assets/linked in.png" alt="">
                 </div>
                 <div class="slide">
-                    <img src="./assets/js png.png" alt="">
-                </div>  
-                <div class="slide">
-                    <img src="./assets/linked in.png" alt="">
-                </div>
-                <div class="slide">
-                    <img src="./assets/sass texto.png" alt="">
-                </div>  
+                    <img class="slider__img" src="./assets/sass texto.png" alt="">
+                </div>   
             </div>
-        </div>  -->
+        </div>  
         
         <section class="section" id="section__herramientas" > 
             <h2 class="section__tittle" >Herramientas</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque eligendi quia quibusdam ducimus perspiciatis! Minus distinctio vel veritatis, nostrum, fugit unde, sunt et molestiae optio sed blanditiis dolorem eaque consequatur?</p> 
+            
 
             <!-- slider de tools -->
-            <!-- <div class="slider__tools">
+             <div class="slider__tools">
                 <div class="slide-track__tools">
                     <div class="slide">
-                        <img src="./assets/git.png" alt="">
+                        <img class="slider__img" src="./assets/git.png" alt="">
                     </div>
                     <div class="slide">
-                        <img src="./assets/github.png" alt="">
+                        <img class="slider__img" src="./assets/github.png" alt="">
                     </div>
                     <div class="slide">
-                        <img src="./assets/visual studio code png.png" alt="">
+                        <img class="slider__img" src="./assets/visual studio code png.png" alt="">
                     </div>
                     <div class="slide">
-                        <img src="./assets/trello.png" alt="">
+                        <img class="slider__img" src="./assets/trello.png" alt="">
                     </div>  
                     <div class="slide">
-                        <img src="./assets/figma.png" alt="">
+                        <img class="slider__img" src="./assets/figma.png" alt="">
                     </div>
                     <div class="slide">
-                        <img src="./assets/analytics png.png" alt="">
+                        <img class="slider__img" src="./assets/analytics png.png" alt="">
                     </div>
 
                     <div class="slide">
-                        <img src="./assets/git.png" alt="">
+                        <img class="slider__img" src="./assets/git.png" alt="">
                     </div>
                     <div class="slide">
-                        <img src="./assets/github.png" alt="">
+                        <img class="slider__img" src="./assets/github.png" alt="">
                     </div>
                     <div class="slide">
-                        <img src="./assets/visual studio code png.png" alt="">
+                        <img class="slider__img" src="./assets/visual studio code png.png" alt="">
                     </div>
                     <div class="slide">
-                        <img src="./assets/trello.png" alt="">
+                        <img class="slider" src="./assets/trello.png" alt="">
                     </div>  
                     <div class="slide">
-                        <img src="./assets/figma.png" alt="">
+                        <img class="slider__img" src="./assets/figma.png" alt="">
                     </div>
                     <div class="slide">
-                        <img src="./assets/analytics png.png" alt="">
+                        <img class="slider__img" src="./assets/analytics png.png" alt="">
                     </div>
-                </div> -->
+                </div> 
 
                     
                 </div>
@@ -223,10 +229,10 @@
         
         <section class="section section__form" id="section_contacto" > 
             <h2 class="contacto__tittle" >Contacto</h2>
-            <form class="form" action="">
-                <input type="text" placeholder="Nombre" >
-                <input type="email" placeholder="@correo" >
-                <input type="text" placeholder="Asunto" > 
+            <form class="form" action="https://formsubmit.co/christian.malfabon@hotmail.com" method="POST" >
+                <input class="formulario"  name="Nombre" type="text" placeholder="Nombre" >
+                <input class="formulario"  name="correo" type="email" placeholder="@correo" >
+                <input class="formulario"  name="Asunto" type="text" placeholder="Asunto" > 
                 <textarea name="mensaje" id="" rows="4" placeholder="Mensaje" ></textarea>
                 <input id="send" type="submit" value="Enviar">
             </form>
@@ -246,5 +252,6 @@
 
     </footer>
 
+    <script src="./main.js" ></script>
 </body>
 </html>

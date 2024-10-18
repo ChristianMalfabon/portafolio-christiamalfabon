@@ -28,9 +28,17 @@ body {
     width: 80px;
 }
 
+.abrirMenu,
+.cerrarMenu {
+    display: none;
+}
+
+
+
 .header__menu--nav{
     display: flex;
     justify-content: space-around;
+    flex-flow: wrap;
     gap: 20px;
 
 }
@@ -38,7 +46,7 @@ body {
 
 
 li{
-    font-size: 1.3rem;
+    font-size: clamp(1rem, 1.3rem, 1.5rem);
 }
 
 a :hover{
@@ -86,7 +94,28 @@ ul  {
     display: flex;
     justify-content: center;
     margin-top: 2%;
+    flex-direction: column;
+    align-items: center;
+    gap: 13px;
        
+}
+.descargar__cv{
+    background-color: #0ff;
+    border: dashed 2px black;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.descargar{
+    width: 15dvw;
+    background-color: #0ff;
+}
+
+.bi-cloud-arrow-down-fill{
+    width: 15dvw;
+    
 }
 
 .description__avatar{
@@ -222,7 +251,7 @@ section  {
 
 .slider{ 
     width: 70vw;
-    height: auto;
+    height: 100px;
     margin: auto;
     overflow: hidden;
 }
@@ -236,11 +265,16 @@ section  {
 
 .slider .slide {
     width: 200px;
+    height: 100px;
 }
 
 .slider .slide img{ 
-    width: 100%;
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
 }
+
+
 
 /* Animación hacia la izquierda */
 @keyframes scroll-left {
@@ -258,35 +292,41 @@ section  {
 /* Styles para el segundo slider (slider__tools) */
 .slider__tools{ 
     width: 70vw;
-    height: auto;
+    height: 100px;
     margin: auto;
     overflow: hidden;
 }
 
+
+
+
 .slider__tools .slide-track__tools{
     display: flex;
-    animation: scroll-right 10s linear infinite; /* Animación hacia la derecha */
-    -webkit-animation: scroll-right 10s linear infinite;
+    animation: scroll-rigth 10s linear infinite; /* Animación hacia la derecha */
+    -webkit-animation: scroll-rigth 10s linear infinite;
     width: calc(200px * 12);
 }
 
 .slider__tools .slide {
     width: 200px;
+    height: 100px;
 }
 
 .slider__tools .slide img{ 
-    width: 100%;
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
 }
 
 /* Animación hacia la derecha */
-@keyframes scroll-right {
+@keyframes scroll-left {
     0%{
         -webkit-transform: translateX(0);
         transform: translateX(0);
     }
     100%{
-        -webkit-transform: translateX(calc(200px*6)); /* Se mueve hacia la derecha */
-        transform: translateX(calc(200px*6));
+        -webkit-transform: translateX(-calc(200px*6)); /* Se mueve hacia la derecha */
+        transform: translateX(-calc(200px*6));
     }
 }
 
@@ -317,7 +357,7 @@ article :hover{
 }
 
 .card__text{
-    font-size: 1.3rem;
+    font-size: clamp(1rem, 1.3rem, 1.5rem);
     color: bisque;
     text-align: justify;
     padding-left: 4%;
@@ -329,11 +369,6 @@ article :hover{
 }
 
 
-.section__form{
-    
-    
-    
-}
 
 .form{
     display: flex;
@@ -348,19 +383,19 @@ h2{
     text-align: center;
     color: #0ff;
     filter: drop-shadow(0 0 12px aqua);
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 2.5rem, 2.85rem);
 }
 
 .contacto__tittle{
     text-align: center;
     color: #0ff;
     filter: drop-shadow(0 0 12px aqua);
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 2.5rem, 2.85rem);
 }
 
 input, textarea {
     width:80%;
-    font-size:1.5rem;
+    font-size:clamp(1rem, 1.3rem, 1.5rem);
     border: solid 2px white;
     
 }
@@ -498,8 +533,154 @@ footer{
     }
 
     .footer__text{
-        
+        text-align: center;
 
+    }
+   
+
+}
+
+@media screen and (max-width:468px){
+
+    *{
+       /* font-size: 1.3rem;*/
+    }
+
+    .header__menu{
+        margin-bottom: 55%;
+    }
+
+    .header__logo{
+        width: 60px;
+    }
+
+    .description{ 
+        display: flex;
+        flex-direction:column;
+        
+        width: 95%;
+        align-items: center;
+    }
+
+    .description__avatar{
+        width: 30%;
+             
+    }
+
+    .abrirMenu,
+    .cerrarMenu{
+        display: block;
+        border: 0;
+       /* font-size: 1.6rem;*/
+         background-color: transparent;
+         color: #0ff;
+        cursor: pointer;
+    }
+
+    nav{
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    nav{
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: .5rem;
+        position: absolute; /*antes de esto se veia bien*/
+        top: 0;
+        right: 0;
+        background-color: black
+    }
+
+     .nav.visible{
+        opacity: 1;
+        visibility: visible;
+    } 
+
+    .header__menu--nav{
+        flex-direction: column;
+        align-items: end;
+        padding: 2rem;
+        bottom: 0;
+        
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+    }
+
+    .header__menu--nav li a {
+
+    }
+
+
+    #skills__container{
+        display:flex;
+        flex-direction:column;
+    }
+
+    .skills__description{ 
+        width: auto;
+        text-align: justify;
+        padding-left:3%;
+        padding-right:3%;
+    }
+    
+    .skills__terminal{
+        display:none;
+        width: auto;
+        align-content: space-around;
+        padding-left:3%;
+        padding-right:3%;
+        
+    }
+
+    .proyectos__cards{
+        display:flex;
+        flex-direction:column;
+        
+    }
+
+    .social__media{
+        display: flex;
+        margin-top:3%;
+        width: auto;
+       
+        gap: 20px;
+        justify-content: space-evenly;
+    }
+
+    #send{
+        margin-bottom:3%;
+    }
+
+    footer{
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+        /*text-align: center;*/
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        box-shadow: 0 8px 32px 0 rgba(0 0 0 0.37);
+
+        border: solid 1px  rgba(0, 255, 255, 0.21);
+        
+        filter: drop-shadow(0 0 12px aqua)
+
+    }
+
+   
+
+    .social__media--footer{
+        display:flex;
+        width: auto;
+        align-items: center;
+    }
+
+    .footer__text{
+        font-size: 1rem;
+        text-align: center;
     }
    
 
