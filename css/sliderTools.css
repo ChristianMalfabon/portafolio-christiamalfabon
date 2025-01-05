@@ -57,14 +57,13 @@
     width: 100%;
 }
 
-/* Animación hacia la derecha */
 @keyframes scroll-right {
     0%{
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
+        -webkit-transform: translateX(-calc(200px*12));
+        transform: translateX(-calc(200px*12));
     }
     100%{
-        -webkit-transform: translateX(calc(200px*6)); /* Se mueve hacia la derecha */
-        transform: translateX(calc(200px*6));
+        -webkit-transform: translateX(0); /* Se mueve hacia la derecha */
+        transform: translateX(0);
     }
 }
